@@ -506,4 +506,12 @@ button:hover,
     padding: 5px;
     border-radius: 8px;
   }
-  
+  .footer-about p{
+    margin-left: 20px;
+  }
+    .footer-contact p{
+        margin-left: 20px;
+    }
+    .footer-bottom{
+        margin-left: 20px;
+    }
