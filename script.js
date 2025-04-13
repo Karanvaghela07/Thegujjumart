@@ -1,7 +1,7 @@
 // Product Data (Different Categories)
 const products = [
-    { name: "Lays Chips", price: 50, image: "assets/images/lays_1.jpeg", category: "Snacks & Chips" },
-    { name: "Doritos", price: 80, image: "assets/images/doritos.jpeg", category: "Snacks & Chips" },
+    { name: "Lays Chips", image: "assets/images/lays_1.jpeg", category: "Snacks & Chips" },
+    { name: "Doritos", image: "assets/images/doritos.jpeg", category: "Snacks & Chips" },
     { name: "Munch", price: 40, image: "assets/images/munch_chocolate.jpeg", category: "Chocolates" },
     { name: "Dairy Milk Bubbly", price: 100, image: "assets/images/darymilk_bubbly.jpeg", category: "Chocolates" },
     { name: "Coca Cola", price: 30, image: "assets/images/coca.jpeg", category: "Drinks" },
@@ -12,18 +12,27 @@ const products = [
     { name: "Starbucks Drink", price: 250, image: "assets/images/starbucks_drink.jpeg", category: "Drinks" },
     { name: "Pringles Chips", price: 120, image: "assets/images/pringles_2.jpeg", category: "Snacks & Chips" },
     { name: "Takis Chips", price: 90, image: "assets/images/takis_chips.jpeg", category: "Snacks & Chips" },
-    { name: "Bhavnagari Gathiya", price: 60, image: "assets/images/bhavnagari_ghatiya.jpeg", category: "Snacks & Chips" },
-    { name: "Dry Kachori", price: 70, image: "assets/images/dry_kachori.jpeg", category: "Snacks & Chips" },
-    { name: "Farali Chevdo", price: 55, image: "assets/images/farali_chevdo.jpeg", category: "Snacks & Chips" },
-    { name: "Jeera Khakhra", price: 45, image: "assets/images/jeera_khakhra.jpeg", category: "Snacks & Chips" },
-    { name: "Methi Khakhra", price: 45, image: "assets/images/methi_khakhra.jpeg", category: "Snacks & Chips" },
-    { name: "Nylon Fafda", price: 60, image: "assets/images/nylon_fafda.jpg", category: "Snacks & Chips" },
+    { name: "Bhavnagari Gathiya", price: 60, image: "assets/images/bhavnagari_ghatiya.jpeg", category: "Gujarati" },
+    { name: "Dry Kachori", price: 70, image: "assets/images/dry_kachori.jpeg", category: "Gujarati" },
+    { name: "Farali Chevdo", price: 55, image: "assets/images/farali_chevdo.jpeg", category: "Gujarati" },
+    { name: "Jeera Khakhra", price: 45, image: "assets/images/jeera_khakhra.jpeg", category: "Gujarati" },
+    { name: "Methi Khakhra", price: 45, image: "assets/images/methi_khakhra.jpeg", category: "Gujarati" },
+    { name: "Nylon Fafda", price: 60, image: "assets/images/nylon_fafda.jpg", category: "Gujarati" },
     { name: "Ratlam Sev", price: 55, image: "assets/images/ratlami_sev.jpeg", category: "Snacks & Chips" },
-    { name: "Sev Mamra", price: 40, image: "assets/images/sev_mamra.jpeg", category: "Snacks & Chips" },
-    { name: "Dal Masala", price: 40, image: "assets/images/dal_masala.jpeg", category: "Dairy Products" },
-    { name: "Kadhi Masala", price: 50, image: "assets/images/kadhi_masala.jpeg", category: "Dairy Products" },
+    { name: "Sev Mamra", price: 40, image: "assets/images/sev_mamra.jpeg", category: "Gujarati" },
+    { name: "Dal Masala", price: 40, image: "assets/images/dal_masala.jpeg", category: "Gujarati" },
+    { name: "Kadhi Masala", price: 50, image: "assets/images/kadhi_masala.jpeg", category: "Gujarati" },
     { name: "Red Bull", price:150, image: "assets/images/redbull_2.jpeg", category: "Drinks" },
     { name: "Red Bull", price:150, image: "assets/images/redbull_3.jpeg", category: "Drinks" },
+    { name: "Indori Mix", price: 50, image: "assets/images/indori_mix.jpg", category: "Gujarati" },
+    { name: "Gathiya", price: 50, image: "assets/images/julelal_gathiya.jpg", category: "Gujarati" },
+    { name: "Madhuvan Mix", price: 50, image: "assets/images/madhuvan_mix.jpg", category: "Gujarati" },
+    { name: "Madrasi Mix", price: 50, image: "assets/images/madrasi_mix.jpg", category: "Gujarati" },
+    { name: "Nylon Sev", price: 50, image: "assets/images/nylon_sev.jpg", category: "Gujarati" },
+    { name: "Papad Chivda", price: 50, image: "assets/images/papad_chivda.jpg", category: "Gujarati" },
+
+
+
 ];
 
 // Cart Data
@@ -43,8 +52,6 @@ function displayProducts(filter = "all") {
         productCard.innerHTML = `
             <img src="${product.image}" alt="${product.name}">
             <h3>${product.name}</h3>
-            <p>₹${product.price}</p>
-            <button onclick="addToCart('${product.name}', ${product.price}, '${product.image}')">Add to Cart</button>
         `;
 
         productList.appendChild(productCard);
