@@ -84,7 +84,6 @@ function updateCartUI() {
             <img src="${item.image}" alt="${item.name}">
             <div>
                 <p>${item.name} (x${item.quantity})</p>
-                <p>₹${item.price * item.quantity}</p>
                 <button onclick="removeFromCart('${item.name}')">Remove</button>
             </div>
         `;
@@ -121,8 +120,6 @@ function displayFilteredProducts(filteredProducts) {
         productCard.innerHTML = `
             <img src="${product.image}" alt="${product.name}">
             <h3>${product.name}</h3>
-            <p>₹${product.price}</p>
-            <button onclick="addToCart('${product.name}', ${product.price}', '${product.image}')">Add to Cart</button>
         `;
 
         productList.appendChild(productCard);
