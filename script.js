@@ -6,10 +6,10 @@ const products = [
     { name: "Dairy Milk Bubbly", price: 100, image: "assets/images/darymilk_bubbly.jpeg", category: "Chocolates" },
     { name: "Coca Cola", price: 30, image: "assets/images/coca.jpeg", category: "Drinks" },
     { name: "Pepsi", price: 30, image: "assets/images/pepsi.jpeg", category: "Drinks" },
-    { name: "Arizona Drink", price: 80, image: "assets/images/arizona_drink.jpeg", category: "Drinks" },
+    { name: "Arizona Drink", price: 80, image: "assets/images/arizona1.png", category: "Drinks" },
     { name: "Mazza", price: 35, image: "assets/images/mazza.jpeg", category: "Drinks" },
     { name: "Red Bull", price: 150, image: "assets/images/redbull_1.jpeg", category: "Drinks" },
-    { name: "Starbucks Drink", price: 250, image: "assets/images/starbucks_drink.jpeg", category: "Drinks" },
+    { name: "Starbucks Drink", price: 250, image: "assets/images/starbucks10.png", category: "Drinks" },
     { name: "Pringles Chips", price: 120, image: "assets/images/pringles_2.jpeg", category: "Snacks & Chips" },
     { name: "Takis Chips", price: 90, image: "assets/images/takis_chips.jpeg", category: "Snacks & Chips" },
     { name: "Bhavnagari Gathiya", price: 60, image: "assets/images/bhavnagari_ghatiya.jpeg", category: "Gujarati" },
@@ -29,7 +29,24 @@ const products = [
     { name: "Madhuvan Mix", price: 50, image: "assets/images/madhuvan_mix.jpg", category: "Gujarati" },
     { name: "Madrasi Mix", price: 50, image: "assets/images/madrasi_mix.jpg", category: "Gujarati" },
     { name: "Nylon Sev", price: 50, image: "assets/images/nylon_sev.jpg", category: "Gujarati" },
-    { name: "Papad Chivda", price: 50, image: "assets/images/papad_chivda.jpg", category: "Gujarati" },
+    { name: "Cocacola", price: 50, image: "assets/images/coca2.jpg", category: "Indian" },
+    { name: "Diet Coke", price: 50, image: "assets/images/diet_cock.jpg", category: "Indian" },
+    { name: "Magic Masala", price: 50, image: "assets/images/lays2.jpg", category: "Indian" },
+    { name: "Cream & Onion", price: 50, image: "assets/images/lays3.jpg", category: "Indian" },
+    { name: "Salted", price: 50, image: "assets/images/lays4.jpg", category: "Indian" },
+    { name: "Ketchup", price: 50, image: "assets/images/lays5.jpg", category: "Indian" },
+    { name: "Tomato Tango", price: 50, image: "assets/images/lays6.jpg", category: "Indian" },
+    { name: "Cheddar Jalapeno", price: 50, image: "assets/images/lays7.jpg", category: "Indian" },
+    { name: "Pepsi", price: 50, image: "assets/images/pepsi2.jpg", category: "Indian" },
+    { name: "Redbull (Blue edition)", price: 50, image: "assets/images/redbull5.jpg", category: "Indian" },
+    { name: "Redbull (Yellow edition)", price: 50, image: "assets/images/redbull6.jpg", category: "Indian" },
+    { name: "Starbucks Mochaa", price: 50, image: "assets/images/starbucks_mocha.jpg", category: "Indian" },
+    { name: "Starbucks Vanilla Flavour", price: 50, image: "assets/images/starbucks_vannila.jpg", category: "Indian" },
+
+
+
+    
+
 
 
 
@@ -84,6 +101,7 @@ function updateCartUI() {
             <img src="${item.image}" alt="${item.name}">
             <div>
                 <p>${item.name} (x${item.quantity})</p>
+                <p>₹${item.price * item.quantity}</p>
                 <button onclick="removeFromCart('${item.name}')">Remove</button>
             </div>
         `;
@@ -120,6 +138,8 @@ function displayFilteredProducts(filteredProducts) {
         productCard.innerHTML = `
             <img src="${product.image}" alt="${product.name}">
             <h3>${product.name}</h3>
+            <p>₹${product.price}</p>
+            <button onclick="addToCart('${product.name}', ${product.price}', '${product.image}')">Add to Cart</button>
         `;
 
         productList.appendChild(productCard);
