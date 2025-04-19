@@ -359,3 +359,320 @@ button:hover {
 .footer-contact a{
     text-decoration: none;
 }
+/* Mobile View Styles - Further Improvements (max-width: 768px) */
+@media (max-width: 768px) {
+    body {
+      font-size: 16px;
+      background-color: #f8f8f8;
+      margin-left: 20px;
+      
+      
+    }
+  
+    /* Header - Looks good */
+    header {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 10px;
+      text-align: center;
+      background-color: white;
+    }
+  
+    .header-left {
+      margin-bottom: 15px;
+    }
+  
+    .logo {
+      width: 150px;
+      height: auto;
+      margin-right: 0;
+    }
+  
+    header ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+      padding: 0 10px;
+    }
+  
+    header ul li {
+      padding: 10px 15px;
+      margin: 5px;
+      font-size: 16px;
+      border-radius: 8px;
+      background-color: #eee;
+      color: #333;
+    }
+  
+    header ul li:hover {
+      background-color: #28a745;
+      color: white;
+    }
+  
+    /* Banner - Looks good */
+    .banner {
+      flex-direction: column-reverse;
+      padding: 30px 15px;
+      margin: 20px auto;
+      text-align: center;
+      background: linear-gradient(to bottom, #ffcc00, #ff9900);
+      border-radius: 15px;
+    }
+  
+    .banner-image {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 80%;
+      max-width: 400px;
+    }
+  
+    .banner-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  
+    .banner-text {
+      padding: 20px;
+    }
+  
+    .banner-text h2 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  
+    /* Improved Product Grid (Two Items Per Row - Removing Extra Space) */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+      gap: 10px; /* Slightly reduced gap */
+      padding: 10px; /* Slightly reduced padding */
+      margin: 0 auto;
+      max-width: 98%; /* Increase max-width to potentially fill more space */
+    }
+  
+    .product-card {
+      padding: 10px; /* Slightly reduced padding */
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .product-card img {
+      height: 180px; /* Adjust image height if needed */
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  
+    .para {
+      font-size: 20px;
+      margin: 20px auto 10px auto;
+      text-align: center;
+    }
+  
+    /* Improved Best Selling Products (Cart Section) */
+    .cart-section {
+      padding: 20px 10px; /* Adjust horizontal padding */
+      background-color: #f8f8f8;
+    }
+  
+    .cart-section h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      text-align: center; /* Center the title */
+    }
+  
+    .cart-container {
+      max-width: 100%;
+      margin: 0 auto; /* Center the container */
+      overflow-x: auto; /* Keep horizontal scroll if needed */
+      padding: 0 10px; /* Add some horizontal padding for the scroll area */
+    }
+  
+    .cart-slider {
+      display: flex;
+      gap: 10px; /* Adjust gap between best-selling items */
+      padding: 10px 0; /* Adjust vertical padding */
+      white-space: nowrap;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+  
+    .cart-slider::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .cart-item {
+      flex: 0 0 auto;
+      width: 180px; /* Adjust width of best-selling items */
+      height: 240px; /* Adjust height */
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15); /* Slightly softer shadow */
+      padding: 10px;
+      text-align: center;
+    }
+  
+    .cart-item img {
+      width: 100%;
+      height: 150px; /* Adjust image height */
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  
+    .product-name {
+      font-size: 15px;
+      font-weight: bold;
+      color: #333;
+      margin-top: 8px;
+    }
+  
+    .product-price {
+      font-size: 16px;
+      color: #ff6600;
+      margin-top: 5px;
+    }
+  
+    /* Payment Module */
+    .payment-module {
+        width: 95%; /* Make it take up most of the screen width */
+        margin: 20px auto; /* Center it with some top and bottom margin */
+        padding: 20px; /* Reduce padding for smaller screens */
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+        height: 600px;
+        justify-content: center;
+        align-items: center; 
+        flex-direction: column; 
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+    
+      .payment-title {
+        font-size: 20px; /* Smaller title */
+        text-align: center; /* Center the title */
+        margin-bottom: 10px;
+      }
+    
+      .payment-subtitle {
+        font-size: 14px; /* Smaller subtitle */
+        text-align: center;
+        color: #555;
+        margin-bottom: 15px;
+      }
+    
+      .payment-content {
+        flex-direction: column; /* Stack image and details vertically */
+        align-items: center; /* Center items */
+        gap: 15px; /* Space between image and details */
+      }
+    
+      .payment-image-container {
+        width: 80%; /* Make image container responsive */
+        max-width: 300px; /* Limit maximum width of the image */
+      }
+    
+      .payment-image {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 8px;
+      }
+    
+      .payment-details {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center; /* Center text in details */
+      }
+    
+      .product-title {
+        font-size: 18px; /* Smaller product title */
+        font-weight: bold;
+      }
+    
+      .payment-description {
+        font-size: 14px; /* Smaller description */
+        color: #666;
+      }
+    
+      .payment-price {
+        font-size: 18px; /* Slightly smaller price */
+        font-weight: bold;
+        color: #d32f2f;
+      }
+    
+      .payment-label {
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 10px; /* Add some space above labels */
+      }
+    
+      .payment-dropdown {
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+      }
+    
+      .payment-quantity {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center quantity controls */
+        gap: 10px;
+        margin-top: 10px;
+      }
+    
+      .quantity-btn {
+        padding: 6px 10px;
+        font-size: 14px;
+      }
+    
+      .quantity-input {
+        width: 50px;
+        text-align: center;
+        font-size: 14px;
+      }
+    
+      .add-to-cart-btn,
+      .shop-pay-btn {
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 5px;
+        margin-top: 15px;
+        width: 100%;
+      }
+  
+    /* Footer */
+    .footer {
+      padding: 30px 15px;
+      text-align: center;
+      background-color: white;
+    }
+  
+    .footer-container {
+      flex-direction: column;
+      gap: 25px;
+    }
+  
+    .footer h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #f9a825;
+    }
+  
+    .footer p {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+  
+    .footer-bottom {
+      margin-top: 15px;
+      font-size: 14px;
+      padding-top: 10px;
+      border-top: 1px solid #eee;
+    }
+  }
+  
+  /* Smaller Mobile Screens (max-width: 480px) - Further refinements */
+  
